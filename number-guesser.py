@@ -13,7 +13,7 @@ max_tries = 5
 while True or player_tries < max_tries:
 
     # Getting player's input
-    player_number = input('Type a number: ' if player_tries < max_tries - 1 else 'Última tentativa!' )
+    player_number = input('Type a number: ' if player_tries < max_tries - 1 else 'Last chance!' )
 
     # Checking if the input is a valid integer
     try:
