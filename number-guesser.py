@@ -14,17 +14,17 @@ while True or player_tries < max_tries:
 
     # Getting player's input
     player_number = input('Type a number: ' if player_tries < max_tries - 1 else 'Last chance!' )
-
+    player_number2 = int(player_number)
     # Checking if the input is a valid integer
-    try:
+    '''try:
         player_number = int(player_number)
     except ValueError:
         # Informing the player to input only integers if the input is not a valid integer
-        print('Error. Type only integrers')
+        print('Error. Type only integrers')'''
         continue  # Skipping the rest of the loop and asking for input again
     
     # Checking if player's guess is correct
-    if player_number == numb_gen:
+    if player_number2 == numb_gen:
         print('You won!!')
         # Asking the player if they want to play again
         player_input = input('Play again YES/NO = ').upper()
@@ -41,7 +41,7 @@ while True or player_tries < max_tries:
             break
     
     # Informing the player to guess a higher number if their guess is lower than the generated number
-    elif player_number < numb_gen:
+    elif player_number2 < numb_gen:
         if player_tries < max_tries - 1:
             print('Try a high number.')
         player_tries += 1
