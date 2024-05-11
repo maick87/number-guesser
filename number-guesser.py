@@ -17,7 +17,6 @@ while True or player_tries < max_tries:
     
     # Converting the input into a integrer
     player_number2 = int(player_number)
-        continue  # Skipping the rest of the loop and asking for input again
     
     # Checking if player's guess is correct
     if player_number2 == numb_gen:
