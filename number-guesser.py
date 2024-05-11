@@ -14,18 +14,15 @@ while True or player_tries < max_tries:
 
     # Getting player's input
     player_number = input('Type a number: ' if player_tries < max_tries - 1 else 'Last chance!' )
+    
+    # Converting the input into a integrer
     player_number2 = int(player_number)
-    # Checking if the input is a valid integer
-    '''try:
-        player_number = int(player_number)
-    except ValueError:
-        # Informing the player to input only integers if the input is not a valid integer
-        print('Error. Type only integrers')'''
         continue  # Skipping the rest of the loop and asking for input again
     
     # Checking if player's guess is correct
     if player_number2 == numb_gen:
         print('You won!!')
+        
         # Asking the player if they want to play again
         player_input = input('Play again YES/NO = ').upper()
         if player_input == 'YES':
@@ -34,6 +31,7 @@ while True or player_tries < max_tries:
             player_tries = 0
             numb_gen = random.randint(1, 100)
             continue
+            
         elif player_input == 'NO':
             # Exiting the game if the player doesn't want to play again
             os.system('cls')
@@ -56,6 +54,7 @@ while True or player_tries < max_tries:
     if player_tries == max_tries:
         os.system('cls')  # Clearing the screen
         print('You lose!! The right number is = ', numb_gen)
+        
         # Asking the player if they want to play again
         player_input2 = input('Play again YES/NO = ').upper()
         if player_input2 == 'YES':
@@ -64,6 +63,7 @@ while True or player_tries < max_tries:
             player_tries = 0
             numb_gen = random.randint(1, 100)
             continue
+            
         elif player_input2 == 'NO':
             # Exiting the game if the player doesn't want to play again
             os.system('cls')
